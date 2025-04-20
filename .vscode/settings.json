@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/b49a05fc-abb3-4191-9f86-43ea09abacdc/resourceGroups/AboApi/providers/Microsoft.Web/sites/abogomaa-chat",
+    "appService.deploySubpath": "."
+}
