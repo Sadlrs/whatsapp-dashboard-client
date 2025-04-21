@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Chat from './components/Chat';
 import InputField from './components/InputField';
+import config from './config';
+
 
 // Sample contacts and messages
 const initialContacts = [
@@ -31,13 +33,14 @@ function App() {
   
     // Send the message to the backend and log the response
     try {
-      const response = await fetch('http://localhost:5000/api/send-message', {
+      const response = await fetch(`${config.backendUrl}/api/send-message`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ message }),
       });
+      
   
       const data = await response.json();
       console.log('Message sent successfully:', data);
